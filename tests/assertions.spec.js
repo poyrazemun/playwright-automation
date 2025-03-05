@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 //bu assertionlarin negatifi de olur. Yani mesela expect(page).not.toHaveURL("BLABLA");
 
-test("AssertionsTest", async ({ page }) => {
+test.skip("AssertionsTest", async ({ page }) => {
   const siteURL = "https://demo.nopcommerce.com/register";
 
   await page.goto(siteURL);
@@ -34,7 +34,7 @@ test("AssertionsTest", async ({ page }) => {
   await expect(firstNameInputBox).toHaveValue(firstName);
 });
 
-test.only("Assertion Dropdown Menu option amount", async ({ page }) => {
+test("Assertion Dropdown Menu option amount", async ({ page }) => {
   const siteURL = "https://demo.nopcommerce.com/digital-downloads";
 
   await page.goto(siteURL);
